@@ -22,6 +22,11 @@ class FibonacciCalculatorTests {
         Assertions.assertEquals(1,FibonacciCalculator.calculateFiboacciNumberByIndex(1).getFibonacciValue());
 	}
 
+		@Test
+	void twentyFiveIndex() throws FibonacciIdexOutOfBoundsException {
+        Assertions.assertEquals(75025L,FibonacciCalculator.calculateFiboacciNumberByIndex(25).getFibonacciValue());
+	}
+
 	@Test
 	void fiftyIndex() throws FibonacciIdexOutOfBoundsException {
         Assertions.assertEquals(12586269025L,FibonacciCalculator.calculateFiboacciNumberByIndex(50).getFibonacciValue());
