@@ -24,25 +24,10 @@ public class FibonacciServiceApplication {
 		return new FibonacciServiceStatus();
 	}
 
-	@RequestMapping(value = "/fibonacci/{count}", method = RequestMethod.GET, produces = { "application/json" })
-	FibonacciNumber fibonacci(@PathVariable("count") int count) {
-		FibonacciNumber fibNum = new FibonacciNumber();
-
-		if (count <= 1) {
-			fibNum.setFibValue(count);
-			fibNum.setIndex(count);
-			return fibNum;
-		}
-
-		int[] fibNums = new int[count + 1];
-		fibNums[0] = 0;
-		fibNums[1] = 1;
-		for (int index = 2; index <= count; index++) {
-			fibNums[index] = fibNums[index - 1] + fibNums[index - 2];
-		}
-		fibNum.setFibValue(fibNums[count]);
-		fibNum.setIndex(count);
-		return fibNum;
+	@RequestMapping(value = "/fibonacci/{fibonacciIndex}", method = RequestMethod.GET, produces = { "application/json" })
+	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") int fibonacciIndex) {
+		
+		return FibonacciCalculator.calculateFiboacciNumberByIndex(fibonacciIndex);
 	}
 
 }
