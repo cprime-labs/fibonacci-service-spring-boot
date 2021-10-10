@@ -4,12 +4,12 @@ public class FibonacciCalculator {
 
 	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) {
 
-		FibonacciNumber fibNum = new FibonacciNumber();
+		FibonacciNumber fibonacciNumber = new FibonacciNumber();
 
 		if (fibonacciIndex <= 1) {
-			fibNum.setFibValue(fibonacciIndex);
-			fibNum.setIndex(fibonacciIndex);
-			return fibNum;
+			fibonacciNumber.setFibValue(fibonacciIndex);
+			fibonacciNumber.setIndex(fibonacciIndex);
+			return fibonacciNumber;
 		}
 
 		int[] fibNums = new int[fibonacciIndex + 1];
@@ -19,10 +19,10 @@ public class FibonacciCalculator {
 			fibNums[index] = fibNums[index - 1] + fibNums[index - 2];
 		}
 
-		fibNum.setFibValue(fibNums[fibonacciIndex]);
-		fibNum.setIndex(fibonacciIndex);
+		fibonacciNumber.setFibValue(fibNums[fibonacciIndex]);
+		fibonacciNumber.setIndex(fibonacciIndex);
 
-		return fibNum;
+		return fibonacciNumber;
 
 	}
 
