@@ -24,3 +24,8 @@ hs_err_pid*
 
 # Target files
 /target
+
+
+# IDE specific
+/.vscode
+/.settings
