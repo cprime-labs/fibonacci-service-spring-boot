@@ -8,6 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class FibonacciCalculatorTests {
 
 	@Test
+	public void contextLoads() {
+	}
+
+
+	@Test
 	void zeroIndex() throws FibonacciIdexOutOfBoundsException  {
         Assertions.assertEquals(0,FibonacciCalculator.calculateFiboacciNumberByIndex(0).getFibonacciValue());
 	}
