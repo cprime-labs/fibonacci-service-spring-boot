@@ -25,9 +25,8 @@ public class FibonacciServiceApplication {
 	}
 
 	@RequestMapping(value = "/fibonacci/{fibonacciIndex}", method = RequestMethod.GET, produces = { "application/json" })
-	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") int fibonacciIndex) {
-		
-		return FibonacciCalculator.calculateFiboacciNumberByIndex(fibonacciIndex);
+	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") int fibonacciIndex) throws FibonacciIdexOutOfBoundsException {
+				return FibonacciCalculator.calculateFiboacciNumberByIndex(fibonacciIndex);
 	}
 
 }

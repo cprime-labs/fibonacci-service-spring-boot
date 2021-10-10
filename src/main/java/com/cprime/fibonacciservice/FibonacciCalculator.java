@@ -2,7 +2,11 @@ package com.cprime.fibonacciservice;
 
 public class FibonacciCalculator {
 
-	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) {
+	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) throws FibonacciIdexOutOfBoundsException {
+
+		if(fibonacciIndex < 0 || fibonacciIndex > 75) {
+			throw new FibonacciIdexOutOfBoundsException("The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'");
+		}
 
 		FibonacciNumber fibonacciNumber = new FibonacciNumber();
 
@@ -12,7 +16,7 @@ public class FibonacciCalculator {
 			return fibonacciNumber;
 		}
 
-		int[] fibNums = new int[fibonacciIndex + 1];
+		long[] fibNums = new long[fibonacciIndex + 1];
 		fibNums[0] = 0;
 		fibNums[1] = 1;
 		for (int index = 2; index <= fibonacciIndex; index++) {
