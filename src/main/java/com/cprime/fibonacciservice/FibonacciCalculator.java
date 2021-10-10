@@ -7,8 +7,8 @@ public class FibonacciCalculator {
 		FibonacciNumber fibonacciNumber = new FibonacciNumber();
 
 		if (fibonacciIndex <= 1) {
-			fibonacciNumber.setFibValue(fibonacciIndex);
-			fibonacciNumber.setIndex(fibonacciIndex);
+			fibonacciNumber.setFibonacciValue(fibonacciIndex);
+			fibonacciNumber.setFibonacciIndex(fibonacciIndex);
 			return fibonacciNumber;
 		}
 
@@ -19,8 +19,8 @@ public class FibonacciCalculator {
 			fibNums[index] = fibNums[index - 1] + fibNums[index - 2];
 		}
 
-		fibonacciNumber.setFibValue(fibNums[fibonacciIndex]);
-		fibonacciNumber.setIndex(fibonacciIndex);
+		fibonacciNumber.setFibonacciValue(fibNums[fibonacciIndex]);
+		fibonacciNumber.setFibonacciIndex(fibonacciIndex);
 
 		return fibonacciNumber;
 

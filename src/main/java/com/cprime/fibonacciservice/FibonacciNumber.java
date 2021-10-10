@@ -1,27 +1,27 @@
 package com.cprime.fibonacciservice;
 
 public class FibonacciNumber {
-	private int fibIndex;
-	private int fibValue;
+	private int fibonacciIndex;
+	private int fibonacciValue;
 
 
 	public FibonacciNumber() {
 	} 
 
-	public int getIndex() {
-		return fibIndex;
+	public int getFibonacciIndex() {
+		return fibonacciIndex;
 	}
 
-	public void setIndex(int index) {
-		this.fibIndex = index;
+	public void setFibonacciIndex(int index) {
+		this.fibonacciIndex = index;
 	}
 
-	public int getFibValue() {
-		return fibValue;
+	public int getFibonacciValue() {
+		return fibonacciValue;
 	}
 
-	public void setFibValue(int fibValue) {
-		this.fibValue = fibValue;
+	public void setFibonacciValue(int fibValue) {
+		this.fibonacciValue = fibValue;
 	}
 
 }
