@@ -14,9 +14,9 @@ public class FibonacciServiceApplication {
 		SpringApplication.run(FibonacciServiceApplication.class, args);
 	}
 
-	@GetMapping("/")
-	String home() {
-		return "Fibonacci Calculator is running!";
+	@RequestMapping(value = "/", method = RequestMethod.GET, produces = { "application/json" })
+	FibonacciServiceStatus root() {
+		return new FibonacciServiceStatus();
 	}
 
 	@RequestMapping(value = "/health", method = RequestMethod.GET, produces = { "application/json" })
