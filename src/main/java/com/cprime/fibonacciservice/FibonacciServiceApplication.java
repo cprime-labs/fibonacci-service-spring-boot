@@ -20,6 +20,12 @@ public class FibonacciServiceApplication {
 		return "Fibonacci Calculator is running!"; 
 	}
 
+	@RequestMapping(value = "/health", method = RequestMethod.GET,
+	produces = {"application/json" })
+	FibonacciServiceStatus health() {
+		return new FibonacciServiceStatus(); 
+	}
+
 	@RequestMapping(value = "/fibonacci/{count}", method = RequestMethod.GET,
 	produces = {"application/json" })
 	FibonacciNumber fibonacci(@PathVariable("count") int count) {
