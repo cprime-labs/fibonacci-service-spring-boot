@@ -2,9 +2,9 @@ package com.cprime.fibonacciservice;
 
 public class FibonacciCalculator {
 
-    public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) {
+	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) {
 
-        FibonacciNumber fibNum = new FibonacciNumber();
+		FibonacciNumber fibNum = new FibonacciNumber();
 
 		if (fibonacciIndex <= 1) {
 			fibNum.setFibValue(fibonacciIndex);
@@ -18,10 +18,12 @@ public class FibonacciCalculator {
 		for (int index = 2; index <= fibonacciIndex; index++) {
 			fibNums[index] = fibNums[index - 1] + fibNums[index - 2];
 		}
+
 		fibNum.setFibValue(fibNums[fibonacciIndex]);
 		fibNum.setIndex(fibonacciIndex);
+
 		return fibNum;
-        
-    }
-    
+
+	}
+
 }
