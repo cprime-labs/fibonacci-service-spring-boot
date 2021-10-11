@@ -23,4 +23,10 @@ class FibonacciServiceApplicationTests {
 		Assertions.assertEquals("UP", response.getStatus());
 	}
 
+	@Test
+	void healthRequestReturnsSystemUpMessage() {
+		FibonacciServiceStatus response = this.restTemplate.getForObject("/health", FibonacciServiceStatus.class);
+		Assertions.assertEquals("UP", response.getStatus());
+	}
+
 }
