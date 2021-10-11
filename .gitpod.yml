@@ -8,6 +8,12 @@ vscode:
     - eamodio.gitlens
     - vscjava.vscode-java-pack
     - github.vscode-pull-request-github
+    - vscjava.vscode-maven
+    - vscjava.vscode-java-test
+    - hbenl.vscode-test-explorer
+    - vscjava.vscode-java-dependency
+    - redhat.fabric8-analytics
+    - vscjava.vscode-java-debug
 
 github:
   prebuilds:
