@@ -26,7 +26,7 @@ fibonacci-service/run-local: fibonacci-service/containerize-local
 # Package the fibonacci-service in a docker container and publish locally.
 #--------------------------------------------------------------------------------------------------------------
 fibonacci-service/containerize-local: fibonacci-service/package-local
-	docker build -f docker/Dockerfile -t fibonacci-service:latest .
+	docker build -f docker/fibonacci-service/Dockerfile -t fibonacci-service:latest .
 
 #--------------------------------------------------------------------------------------------------------------
 # package local
