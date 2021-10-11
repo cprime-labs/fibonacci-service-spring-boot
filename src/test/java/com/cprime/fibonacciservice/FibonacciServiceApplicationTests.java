@@ -29,4 +29,11 @@ class FibonacciServiceApplicationTests {
 		Assertions.assertEquals("UP", response.getStatus());
 	}
 
+	@Test
+	void zeroIndex() {
+		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/0", FibonacciNumber.class);
+		Assertions.assertEquals(0, response.getFibonacciIndex());
+		Assertions.assertEquals(0, response.getFibonacciValue());
+	}
+
 }
