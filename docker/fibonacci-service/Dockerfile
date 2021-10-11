@@ -13,9 +13,20 @@
 #--------------------------------------------------------------------------------------------------------------
 FROM openjdk:18-jdk-alpine
 
+#--------------------------------------------------------------------------------------------------------------
+# Globally scoped arguements
+#--------------------------------------------------------------------------------------------------------------
 ARG JAR_FILE=target/*.jar
 
-COPY ${JAR_FILE} app.jar
+#--------------------------------------------------------------------------------------------------------------
+# Copy jar file to docker image
+#--------------------------------------------------------------------------------------------------------------
+COPY ${JAR_FILE} fibonacci-service.jar
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+#--------------------------------------------------------------------------------------------------------------
+# Add an entrypoint, this allows us to configure a container that will run as an executable.
+# In this case we execute the 'java' command on the container and pass the path to the fibonacci-service.jar
+# as the '-jar' command line arguement
+#--------------------------------------------------------------------------------------------------------------
+ENTRYPOINT ["java","-jar","/fibonacci-service.jar"]
 
