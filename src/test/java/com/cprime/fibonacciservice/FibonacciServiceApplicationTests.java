@@ -30,7 +30,7 @@ class FibonacciServiceApplicationTests {
 	}
 
 	@Test
-	void zeroIndex() {
+	void zeroIndexRequestReturnsCorrectValue() {
 		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/0", FibonacciNumber.class);
 		Assertions.assertEquals(0, response.getFibonacciIndex());
 		Assertions.assertEquals(0, response.getFibonacciValue());
