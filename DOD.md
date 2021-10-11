@@ -46,7 +46,7 @@ The actionable recommendations listed below leverage “real world” experience
 
 ### Codebase
 - [ ] One-repo-per-service (poly-repo) architectures (preferred, not required)
-- [ ] Use a Git-based workflow with [merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) & approval process
+- [ ] Use a Git-based workflow with [pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) & approval process
 - [ ] Dockerized with a `Dockerfile`
 - [ ] Automated tests exist to validate application works
 
