@@ -15,7 +15,7 @@
 #--------------------------------------------------------------------------------------------------------------
 # run local
 #--------------------------------------------------------------------------------------------------------------
-# Run the fibonacci-service locally within the developer IDE.
+# Run the fibonacci-service locally within the developer IDE using docker.
 #--------------------------------------------------------------------------------------------------------------
 fibonacci-service/run-local: fibonacci-service/containerize-local
 	docker run -p 8080:8080 fibonacci-service:latest
