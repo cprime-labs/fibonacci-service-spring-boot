@@ -19,7 +19,7 @@ FROM openjdk:18-jdk-alpine
 ARG JAR_FILE=target/*.jar
 
 #--------------------------------------------------------------------------------------------------------------
-# Copy jar file to docker image
+# Copy jar file to docker image root directory
 #--------------------------------------------------------------------------------------------------------------
 COPY ${JAR_FILE} fibonacci-service.jar
 
