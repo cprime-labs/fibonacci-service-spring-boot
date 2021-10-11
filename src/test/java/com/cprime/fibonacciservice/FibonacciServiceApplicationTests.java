@@ -11,7 +11,9 @@ import org.junit.jupiter.api.Assertions;
 class FibonacciServiceApplicationTests {
 
 	@Autowired
-	private TestRestTemplate restTemplate;;
+	private TestRestTemplate restTemplate;
+
+	private static final String SYSTEM_STATUS = "UP";
 
 	@Test
 	void contextLoads() {
@@ -20,13 +22,13 @@ class FibonacciServiceApplicationTests {
 	@Test
 	void rootRequestReturnsSystemUpMessage() {
 		FibonacciServiceStatus response = this.restTemplate.getForObject("/", FibonacciServiceStatus.class);
-		Assertions.assertEquals("UP", response.getStatus());
+		Assertions.assertEquals(SYSTEM_STATUS, response.getStatus());
 	}
 
 	@Test
 	void healthRequestReturnsSystemUpMessage() {
 		FibonacciServiceStatus response = this.restTemplate.getForObject("/health", FibonacciServiceStatus.class);
-		Assertions.assertEquals("UP", response.getStatus());
+		Assertions.assertEquals(SYSTEM_STATUS, response.getStatus());
 	}
 
 	@Test
