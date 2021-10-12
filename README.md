@@ -54,6 +54,10 @@ The following tools are not strictly required to work with this repo but we reco
 - [GitHub](https://GitHub.com): GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features. 
 - [Gitpod](https://www.gitpod.io/): Gitpod streamlines developer workflows by providing prebuilt, collaborative development environments in your browser - powered by VS Code.
 
+<a href="https://cprime.com/" target="_blank">
+<img src=".assets/cp-gh-gp-ms-partner.png" />
+</a>
+
 ## Who maintains this repo?
 
 This repo is maintained by CPrime Engineering. If you're looking for support, send an email to [elite-engineering@cprime.com](mailto:elite-engineering@cprime.com?subject=Fibonacci%20DevOps%20Demo).
