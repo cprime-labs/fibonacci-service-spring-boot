@@ -96,4 +96,6 @@ Creation of architecural decision records relating to this repo is automated usi
 This code is released under the Creative Commons BY-NC-ND License. Please see
 [LICENSE](/LICENSE) and [NOTICE](/NOTICE) for more details.
 
-
+<a href="https://opensource.org/" target="_blank">
+<img src=".assets/cp-osi-love.png" />
+</a>
