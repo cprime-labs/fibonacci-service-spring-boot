@@ -24,9 +24,14 @@ public class FibonacciServiceApplication {
 		return new FibonacciServiceStatus();
 	}
 
-	@RequestMapping(value = "/fibonacci/{fibonacciIndex}", method = RequestMethod.GET, produces = { "application/json" })
-	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") int fibonacciIndex) throws FibonacciIndexOutOfBoundsException {
-				return FibonacciCalculator.calculateFiboacciNumberByIndex(fibonacciIndex);
+	@RequestMapping(value = "/fibonacci/{fibonacciIndex}", method = RequestMethod.GET, produces = {
+			"application/json" })
+	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") String fibonacciIndex)
+			throws FibonacciIndexOutOfBoundsException, FibonacciIndexWrongTypeException {
+
+		FibonacciServiceUtils.validateInteger(fibonacciIndex);
+		
+		return FibonacciCalculator.calculateFiboacciNumberByIndex(Integer.parseInt(fibonacciIndex));
 	}
 
 }

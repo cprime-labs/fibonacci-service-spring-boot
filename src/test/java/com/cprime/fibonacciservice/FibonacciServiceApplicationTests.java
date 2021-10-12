@@ -78,4 +78,22 @@ class FibonacciServiceApplicationTests {
 		Assertions.assertEquals("/fibonacci/-1", object.getString("path"));
 	}
 
+	@Test
+	void floatingPointIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/1.5", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals(500, object.getInt("status"));
+		Assertions.assertEquals("Internal Server Error", object.getString("error"));
+		Assertions.assertEquals("/fibonacci/1.5", object.getString("path"));
+	}
+
+	@Test
+	void stringIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/one", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals(500, object.getInt("status"));
+		Assertions.assertEquals("Internal Server Error", object.getString("error"));
+		Assertions.assertEquals("/fibonacci/one", object.getString("path"));
+	}
+
 }
