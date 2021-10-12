@@ -1,0 +1,27 @@
+name: JUnit5 Tests
+on:
+  push:
+  schedule:
+    - cron:  '0 3 * * *'
+jobs:
+  run_tests:
+    name: JUnit action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v1
+      - name: Set up JDK 14
+        uses: actions/setup-java@v1
+        with:
+          java-version: 14
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: Run tests with Maven
+        run: mvn test --settings maven-settings.xml --file pom.xml
+        env: 
+          MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
+          MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
