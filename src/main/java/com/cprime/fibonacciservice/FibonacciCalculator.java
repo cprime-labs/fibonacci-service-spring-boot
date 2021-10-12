@@ -2,10 +2,10 @@ package com.cprime.fibonacciservice;
 
 public class FibonacciCalculator {
 
-	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) throws FibonacciIdexOutOfBoundsException {
+	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) throws FibonacciIndexOutOfBoundsException {
 
 		if(fibonacciIndex < 0 || fibonacciIndex > 75) {
-			throw new FibonacciIdexOutOfBoundsException("The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'");
+			throw new FibonacciIndexOutOfBoundsException("The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'");
 		}
 
 		FibonacciNumber fibonacciNumber = new FibonacciNumber();
