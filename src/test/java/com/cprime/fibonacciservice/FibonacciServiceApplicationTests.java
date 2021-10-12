@@ -1,6 +1,8 @@
 package com.cprime.fibonacciservice;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -32,33 +34,14 @@ class FibonacciServiceApplicationTests {
 		Assertions.assertEquals(SYSTEM_STATUS, response.getStatus());
 	}
 
-	@Test
-	void zeroIndexRequestReturnsCorrectValue() {
-		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/0", FibonacciNumber.class);
-		Assertions.assertEquals(0, response.getFibonacciIndex());
-		Assertions.assertEquals(0, response.getFibonacciValue());
-	}
+	@ParameterizedTest
+    @CsvFileSource(resources = "/fibonacci-index-value-mapping.csv", numLinesToSkip = 1)
+    void indexRequestReturnsCorrectValu(int input, long expected) throws FibonacciIndexOutOfBoundsException {
 
-	@Test
-	void twentyFiveIndexRequestReturnsCorrectValue() {
-		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/25", FibonacciNumber.class);
-		Assertions.assertEquals(25, response.getFibonacciIndex());
-		Assertions.assertEquals(75025L, response.getFibonacciValue());
-	}
-
-	@Test
-	void fiftyIndexRequestReturnsCorrectValue() {
-		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/50", FibonacciNumber.class);
-		Assertions.assertEquals(50, response.getFibonacciIndex());
-		Assertions.assertEquals(12586269025L, response.getFibonacciValue());
-	}
-
-	@Test
-	void seventyFiveIndexRequestReturnsCorrectValue() {
-		FibonacciNumber response = this.restTemplate.getForObject("/fibonacci/75", FibonacciNumber.class);
-		Assertions.assertEquals(75, response.getFibonacciIndex());
-		Assertions.assertEquals(2111485077978050L, response.getFibonacciValue());
-	}
+		FibonacciNumber response = this.restTemplate.getForObject(String.format("/fibonacci/%s",input), FibonacciNumber.class);
+		Assertions.assertEquals(input, response.getFibonacciIndex());
+		Assertions.assertEquals(expected, response.getFibonacciValue());
+    }
 
 	@Test
 	void seventySixIndexRequestThrowsInternalServerError() throws JSONException {
