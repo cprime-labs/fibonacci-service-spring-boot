@@ -1,7 +1,7 @@
 extraction:
   java:
     before_index:
-      export BUILD_MODE=test
+      export BUILD_MODE=release
     index:
       maven:
         version: 2.5.5
