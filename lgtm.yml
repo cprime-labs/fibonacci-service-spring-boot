@@ -1,5 +1,7 @@
 extraction:
   java:
+    before_index:
+      export BUILD_MODE=test
     index:
-      build_command:
-      - make fibonacci-service/package-local
+      maven:
+        version: 2.5.5
