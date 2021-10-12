@@ -36,7 +36,7 @@ class FibonacciServiceApplicationTests {
 
 	@ParameterizedTest
     @CsvFileSource(resources = "/fibonacci-index-value-mapping.csv", numLinesToSkip = 1)
-    void indexRequestReturnsCorrectValu(int input, long expected) throws FibonacciIndexOutOfBoundsException {
+    void fibonacciIndexRequestReturnsCorrectValue(int input, long expected) throws FibonacciIndexOutOfBoundsException {
 
 		FibonacciNumber response = this.restTemplate.getForObject(String.format("/fibonacci/%s",input), FibonacciNumber.class);
 		Assertions.assertEquals(input, response.getFibonacciIndex());
