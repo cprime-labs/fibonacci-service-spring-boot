@@ -39,14 +39,14 @@ class FibonacciCalculatorTests {
 	}
 
 	@Test
-	void seventySixIndex() {
+	void seventySixIndexThrowsFibonacciIndexOutOfBoundsException() {
 		Assertions.assertThrows(FibonacciIndexOutOfBoundsException.class, () -> {
 			FibonacciCalculator.calculateFiboacciNumberByIndex(76);
 		});
 	}
 
 	@Test
-	void minusOneIndex() {
+	void minusOneIndexThrowsFibonacciIndexOutOfBoundsException() {
 		Assertions.assertThrows(FibonacciIndexOutOfBoundsException.class, () -> {
 			FibonacciCalculator.calculateFiboacciNumberByIndex(-1);
 		});
