@@ -1,3 +1,10 @@
+<a href="https://cprime.com/" target="_blank">
+<img src=".assets/cprime-logo.png" width="300" />
+</a>
+
+[![Maintained by CPrime Elite Engineering](https://img.shields.io/badge/maintained%20by-cprime%20elite%20engineering-ED1846)](https://cprime.com/) 
+[![Built for Engineers](https://img.shields.io/badge/project-natwest%20fibonacci%20devops%20demo-ED1846)](https://github.com/cprimeinc)
+
 # fibonacci-service-spring-boot
 A spring boot microservice implementation for the Fibonacci DevOps demo.
 
