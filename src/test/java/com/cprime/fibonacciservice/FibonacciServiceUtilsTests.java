@@ -25,5 +25,19 @@ public class FibonacciServiceUtilsTests {
 	void integerIndexDoesNotThrowFibonacciIndexWrongTypeException() {
         Assertions.assertDoesNotThrow( () -> FibonacciServiceUtils.validateInteger("1") );
 	}
+
+	@Test
+	void seventySixIndexThrowsFibonacciIndexOutOfBoundsException() {
+		Assertions.assertThrows(FibonacciIndexOutOfBoundsException.class, () -> {
+			FibonacciServiceUtils.validateIntegerIndexBounds(76);
+		});
+	}
+
+	@Test
+	void minusOneIndexThrowsFibonacciIndexOutOfBoundsException() {
+		Assertions.assertThrows(FibonacciIndexOutOfBoundsException.class, () -> {
+			FibonacciServiceUtils.validateIntegerIndexBounds(-1);
+		});
+	}
     
 }
