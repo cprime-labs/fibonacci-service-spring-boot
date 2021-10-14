@@ -5,6 +5,9 @@
 [![Maintained by CPrime Elite Engineering](https://img.shields.io/badge/maintained%20by-cprime%20elite%20engineering-ED1846)](https://cprime.com/) 
 [![Built for Engineers](https://img.shields.io/badge/project-fibonacci%20devops%20demo-ED1846)](https://github.com/cprimeinc)
 
+# fibonacci-service-spring-boot
+A spring boot microservice implementation for the Fibonacci DevOps demo.
+
 ## Sonarcloud Analysis
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=alert_status)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
@@ -15,9 +18,6 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=security_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_index)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=code_smells)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-
-# fibonacci-service-spring-boot
-A spring boot microservice implementation for the Fibonacci DevOps demo.
 
 ## Overview
 
