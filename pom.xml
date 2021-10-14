@@ -38,8 +38,8 @@
 
 		<plugin>
 				<groupId>org.jacoco</groupId>
-				<artifactId>c</artifactId>
-				<version>0.8.7</version>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
 				<executions>
 					<execution>
 						<goals>
