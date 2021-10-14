@@ -45,4 +45,36 @@ class FibonacciServiceApplicationTests {
 		Assertions.assertEquals(expected, response.getFibonacciValue());
     }
 
+	@Test
+	void seventySixIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/76", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals("INTERNAL_SERVER_ERROR", object.getString("status"));
+		Assertions.assertEquals("The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'", object.getString("message"));
+	}
+
+	@Test
+	void minusOneIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/-1", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals("INTERNAL_SERVER_ERROR", object.getString("status"));
+		Assertions.assertEquals("The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'", object.getString("message"));
+	}
+
+	@Test
+	void floatingPointIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/1.5", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals("INTERNAL_SERVER_ERROR", object.getString("status"));
+		Assertions.assertEquals("Index value must be an integer.", object.getString("message"));
+	}
+
+	@Test
+	void stringIndexRequestThrowsInternalServerError() throws JSONException {
+		String response = this.restTemplate.getForObject("/fibonacci/one", String.class);
+		JSONObject object = new JSONObject(response);
+		Assertions.assertEquals("INTERNAL_SERVER_ERROR", object.getString("status"));
+		Assertions.assertEquals("Index value must be an integer.", object.getString("message"));
+	}
+
 }
