@@ -1,5 +1,6 @@
 package com.cprime.fibonacciservice;
 
+import com.cprime.fibonacciservice.health.*;
 import com.cprime.fibonacciservice.exceptions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

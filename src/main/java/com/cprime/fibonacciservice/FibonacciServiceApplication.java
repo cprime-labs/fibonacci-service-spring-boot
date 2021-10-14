@@ -1,5 +1,6 @@
 package com.cprime.fibonacciservice;
 
+import com.cprime.fibonacciservice.health.*;
 import com.cprime.fibonacciservice.exceptions.*;
 import com.cprime.fibonacciservice.utils.FibonacciServiceUtils;
 import org.springframework.boot.SpringApplication;
