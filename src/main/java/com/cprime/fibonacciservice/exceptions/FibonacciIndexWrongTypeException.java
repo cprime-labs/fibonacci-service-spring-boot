@@ -1,4 +1,4 @@
-package com.cprime.fibonacciservice;
+package com.cprime.fibonacciservice.exceptions;
 
 public class FibonacciIndexWrongTypeException extends Exception {
 

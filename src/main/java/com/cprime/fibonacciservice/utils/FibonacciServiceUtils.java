@@ -1,4 +1,6 @@
-package com.cprime.fibonacciservice;
+package com.cprime.fibonacciservice.utils;
+
+import com.cprime.fibonacciservice.exceptions.*;
 
 public class FibonacciServiceUtils {
 
