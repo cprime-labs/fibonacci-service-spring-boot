@@ -1,0 +1,5 @@
+request,status,message
+"/fibonacci/76","INTERNAL_SERVER_ERROR","The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'."
+"/fibonacci/-1","INTERNAL_SERVER_ERROR","The minimum index this service can calculate a Fibonacci number for is '0' and maximum index this service can calculate a Fibonacci number for is '75'."
+"/fibonacci/1.5","INTERNAL_SERVER_ERROR","Index value must be an integer."
+"/fibonacci/one","INTERNAL_SERVER_ERROR","Index value must be an integer."
