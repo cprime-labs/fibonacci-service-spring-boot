@@ -40,6 +40,7 @@ If you are viewing this readme by any other means go to the canonical repository
 - From the command prompt in the project root of this repo, execute the following command.
 - `make fibonacci-service/run-local`
 
+
 #### Step 5: Eat, Sleep, Code, Repeat!
 - Create a local working branch for whatever feature you are working on.
 - Run local tests to ensure you won't push a breaking build.
