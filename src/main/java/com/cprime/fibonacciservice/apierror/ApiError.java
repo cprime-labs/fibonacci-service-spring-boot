@@ -14,27 +14,23 @@ public class ApiError {
         return status;
     }
  
-    private ApiError() {
-        timestamp = LocalDateTime.now();
+    public LocalDateTime getTimestamp() {
+        return timestamp;
     }
- 
-    public ApiError(HttpStatus status) {
-        this();
-        this.status = status;
+
+    public String getMessage() {
+        return message;
     }
- 
-    public ApiError(HttpStatus status, Throwable ex) {
-        this();
-        this.status = status;
-        this.message = "Unexpected error";
-        this.debugMessage = ex.getLocalizedMessage();
+
+    public String getDebugMessage() {
+        return debugMessage;
     }
  
     public ApiError(HttpStatus status, String message, Throwable ex) {
-        this();
         this.status = status;
         this.message = message;
         this.debugMessage = ex.getLocalizedMessage();
+        this.timestamp = LocalDateTime.now();
     }
 
 }
