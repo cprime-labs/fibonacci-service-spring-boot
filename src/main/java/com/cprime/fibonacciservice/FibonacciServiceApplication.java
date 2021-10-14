@@ -17,18 +17,17 @@ public class FibonacciServiceApplication {
 		SpringApplication.run(FibonacciServiceApplication.class, args);
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET, produces = { "application/json" })
+	@GetMapping
 	FibonacciServiceStatus root() {
 		return new FibonacciServiceStatus();
 	}
 
-	@RequestMapping(value = "/health", method = RequestMethod.GET, produces = { "application/json" })
+	@GetMapping(path = "/health")
 	FibonacciServiceStatus health() {
 		return new FibonacciServiceStatus();
 	}
 
-	@RequestMapping(value = "/fibonacci/{fibonacciIndex}", method = RequestMethod.GET, produces = {
-			"application/json" })
+	@GetMapping(path = "/fibonacci/{fibonacciIndex}")
 	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") String fibonacciIndex)
 			throws FibonacciIndexOutOfBoundsException, FibonacciIndexWrongTypeException {
 
