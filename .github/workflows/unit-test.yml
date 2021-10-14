@@ -1,4 +1,4 @@
-name: JUnit5 Tests
+name: junit5 tests
 on:
   push:
   schedule:
