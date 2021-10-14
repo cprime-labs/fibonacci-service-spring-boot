@@ -15,7 +15,6 @@ A spring boot microservice implementation for the Fibonacci DevOps demo.
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 
-
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=coverage)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=code_smells)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
