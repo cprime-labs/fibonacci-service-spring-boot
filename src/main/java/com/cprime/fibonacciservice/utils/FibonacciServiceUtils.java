@@ -4,6 +4,10 @@ import com.cprime.fibonacciservice.exceptions.*;
 
 public class FibonacciServiceUtils {
 
+	private FibonacciServiceUtils() {
+		throw new IllegalStateException("Utility class");
+	}
+
     public static void validateInteger(String fibonacciIndex) throws FibonacciIndexWrongTypeException {
 		try {
 			Integer.parseInt(fibonacciIndex);

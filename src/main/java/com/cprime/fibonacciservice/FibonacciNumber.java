@@ -4,10 +4,6 @@ public class FibonacciNumber {
 	private long fibonacciIndex;
 	private long fibonacciValue;
 
-
-	public FibonacciNumber() {
-	} 
-
 	public long getFibonacciIndex() {
 		return fibonacciIndex;
 	}

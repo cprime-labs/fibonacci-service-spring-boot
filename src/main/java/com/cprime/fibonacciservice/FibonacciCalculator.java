@@ -5,6 +5,10 @@ import com.cprime.fibonacciservice.utils.FibonacciServiceUtils;
 
 public class FibonacciCalculator {
 
+	private FibonacciCalculator() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	public static FibonacciNumber calculateFiboacciNumberByIndex(int fibonacciIndex) throws FibonacciIndexOutOfBoundsException {
 
 		FibonacciServiceUtils.validateIntegerIndexBounds(fibonacciIndex);
