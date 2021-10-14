@@ -16,17 +16,17 @@ public class FibonacciServiceApplication {
 	}
 
 	@GetMapping
-	FibonacciServiceStatus root() {
+	public FibonacciServiceStatus root() {
 		return new FibonacciServiceStatus();
 	}
 
 	@GetMapping(path = "/health")
-	FibonacciServiceStatus health() {
+	public FibonacciServiceStatus health() {
 		return new FibonacciServiceStatus();
 	}
 
 	@GetMapping(path = "/fibonacci/{fibonacciIndex}")
-	FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") String fibonacciIndex)
+	public FibonacciNumber fibonacci(@PathVariable("fibonacciIndex") String fibonacciIndex)
 			throws FibonacciIndexOutOfBoundsException, FibonacciIndexWrongTypeException {
 
 		FibonacciServiceUtils.validateInteger(fibonacciIndex);
