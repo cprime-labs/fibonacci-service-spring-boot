@@ -8,6 +8,13 @@
 # fibonacci-service-spring-boot
 A spring boot microservice implementation for the Fibonacci DevOps demo.
 
+## Build Status
+
+[![Latest](https://img.shields.io/badge/latest-0.0.0-31C654)](../../releases) 
+![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/unit-tests.yml/badge.svg)
+![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/sonarcloud-analysis.yml/badge.svg)
+
+
 ## Sonarcloud Analysis
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=alert_status)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
