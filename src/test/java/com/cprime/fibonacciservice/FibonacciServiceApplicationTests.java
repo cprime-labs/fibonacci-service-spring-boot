@@ -21,10 +21,6 @@ class FibonacciServiceApplicationTests {
 	private static final String SYSTEM_STATUS = "UP";
 
 	@Test
-	void contextLoads() {
-	}
-
-	@Test
 	void rootRequestReturnsSystemUpMessage() {
 		FibonacciServiceStatus response = this.restTemplate.getForObject("/", FibonacciServiceStatus.class);
 		Assertions.assertEquals(SYSTEM_STATUS, response.getStatus());

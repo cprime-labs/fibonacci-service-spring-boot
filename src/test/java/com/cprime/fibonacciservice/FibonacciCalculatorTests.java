@@ -10,10 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class FibonacciCalculatorTests {
 
-	@Test
-	public void contextLoads() {
-	}
-
 	@ParameterizedTest
     @CsvFileSource(resources = "/fibonacci-index-value-mapping.csv", numLinesToSkip = 1)
     void calculateFibonacciNumberByIndexReturnsCorrectValues(int input, long expected) throws FibonacciIndexOutOfBoundsException {
