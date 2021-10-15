@@ -1,0 +1,33 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: https://github.com/cprime-labs/fibonacci-service-spring-boot
+  commits:
+     filters:
+       Type:
+         - doc
+         - adr
+         - feat
+         - fix
+         - perf
+         - refactor
+         - test
+  commit_groups:
+     title_maps:
+       doc: Documentation
+       adr: Architectural Decision Records
+       feat: Features
+       fix: Bug Fixes
+       perf: Performance Improvements
+       refactor: Code Refactoring
+       test: Test Coverage
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE
