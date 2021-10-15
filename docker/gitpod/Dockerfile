@@ -17,6 +17,7 @@ FROM gitpod/workspace-full
 #--------------------------------------------------------------------------------------------------------------
 USER root
 
+
 # Install adr-tools -------------------------------------------------------------------------------------------
 RUN git clone https://github.com/npryce/adr-tools.git ~/adr-tools \
 	&& cd ~/adr-tools && git checkout tags/3.0.0 \
@@ -31,3 +32,9 @@ RUN git clone https://github.com/npryce/adr-tools.git ~/adr-tools \
     && echo '###############################################################################' >>  /home/gitpod/.bashrc \
     && echo '' >>  /home/gitpod/.bashrc \
     && echo '' >>  /home/gitpod/.bashrc 
+
+# Install git-chglog ------------------------------------------------------------------------------------------
+RUN git clone https://github.com/git-chglog/git-chglog.git ~/.git-chglog \
+    && cd ~/.git-chglog \
+    && make build \
+    && install git-chglog /usr/bin
