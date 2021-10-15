@@ -22,7 +22,7 @@ class FibonacciServiceApplicationTests {
 
 	@Test
 	void main() {
-		FibonacciServiceApplication.main(new String[] {});
+		Assertions.assertAll(() -> FibonacciServiceApplication.main(new String[] {}));
 	}
 
 	@Test
