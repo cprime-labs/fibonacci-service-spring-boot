@@ -14,10 +14,12 @@ import java.lang.reflect.InvocationTargetException;
 class FibonacciCalculatorTests {
 
 	@ParameterizedTest
-    @CsvFileSource(resources = "/fibonacci-index-value-mapping.csv", numLinesToSkip = 1)
-    void calculateFibonacciNumberByIndexReturnsCorrectValues(int input, long expected) throws FibonacciIndexOutOfBoundsException {
-        Assertions.assertEquals(expected, FibonacciCalculator.calculateFiboacciNumberByIndex(input).getFibonacciValue());
-    }
+	@CsvFileSource(resources = "/fibonacci-index-value-mapping.csv", numLinesToSkip = 1)
+	void calculateFibonacciNumberByIndexReturnsCorrectValues(int input, long expected)
+			throws FibonacciIndexOutOfBoundsException {
+		Assertions.assertEquals(expected,
+				FibonacciCalculator.calculateFiboacciNumberByIndex(input).getFibonacciValue());
+	}
 
 	@Test
 	void seventySixIndexThrowsFibonacciIndexOutOfBoundsException() {
@@ -31,6 +33,29 @@ class FibonacciCalculatorTests {
 		Assertions.assertThrows(FibonacciIndexOutOfBoundsException.class, () -> {
 			FibonacciCalculator.calculateFiboacciNumberByIndex(-1);
 		});
+	}
+
+	@Test
+	void testFibonacciCalculatorConstructorIsPrivate()
+			throws IllegalStateException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		Constructor<FibonacciCalculator> constructor = FibonacciCalculator.class.getDeclaredConstructor();
+		Assertions.assertTrue(Modifier.isPrivate(constructor.getModifiers()));
+	}
+
+	@Test
+	void testFibonacciCalculatorConstructorThrowsIllegalStateException()
+			throws IllegalStateException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		Constructor<FibonacciCalculator> constructor = FibonacciCalculator.class.getDeclaredConstructor();
+		constructor.setAccessible(true);
+		try {
+			constructor.newInstance();
+		} catch (InvocationTargetException ex) {
+			Assertions.assertThrows(IllegalStateException.class, () -> {
+				throw ex.getCause();
+			});
+		}
 	}
 
 }
