@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fibonacci-service-spring-boot" />
+  <link type="application/atom+xml" rel="alternate" href="/feed/release.xml" title="Jekyll releases posts" />
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to Jekyll’s master branch" href="https://github.com/cprime-labs/fibonacci-service-spring-boot/commits/master.atom">
+  <link rel="preload" href="/fonts/lato-v14-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/lato-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/css/screen.css" as="style">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Default Configuration | fibonacci-service-spring-boot</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Default Configuration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jekyll runs with the following configuration options by default. Alternative settings for these options can be explicitly specified in the configuration file or on the command-line." />
+<meta property="og:description" content="Jekyll runs with the following configuration options by default. Alternative settings for these options can be explicitly specified in the configuration file or on the command-line." />
+<link rel="canonical" href="http://localhost:4000/docs/configuration/default/" />
+<meta property="og:url" content="http://localhost:4000/docs/configuration/default/" />
+<meta property="og:site_name" content="fibonacci-service-spring-boot" />
+<meta property="og:image" content="http://localhost:4000/img/jekyll-og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/img/jekyll-og.png" />
+<meta property="twitter:title" content="Default Configuration" />
+<meta name="twitter:site" content="@cprime" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/img/cprime-logo.png"}},"description":"Jekyll runs with the following configuration options by default. Alternative settings for these options can be explicitly specified in the configuration file or on the command-line.","image":"http://localhost:4000/img/jekyll-og.png","@type":"WebPage","headline":"Default Configuration","url":"http://localhost:4000/docs/configuration/default/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="wrap"><header>
+  <div class="flexbox">
+    <div class="center-on-mobiles">
+      <h1>
+        <a href="/" class="logo">
+          <span class="sr-only">cprime</span>
+          <img src="/img/cprime-logo.png" height="65" alt="cprime">
+        </a>
+      </h1>
+    </div>
+    <nav class="main-nav hide-on-mobiles">
+      <ul>
+  <li><a href="/">Home</a></li>
+  <li class="current"><a href="/docs/">Docs</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/news/">News</a></li>
+  </ul>
+</nav>
+    <div class="search hide-on-mobiles">
+      <input type="text" id="docsearch-input" placeholder="Search the docs…">
+</div>
+    <div class="meta hide-on-mobiles">
+      <ul>
+        <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot/releases/tag/v0.0.0">v0.0.0</a></li>
+        <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li><a href="/">Home</a></li>
+    <li class="current" ><a href="/docs/">Docs</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot">GitHub</a></li>
+</ul>
+</nav>
+</header>
+<section class="docs">
+  <div class="grid">
+    <div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the docs…</option>
+    <optgroup label="Getting Started">
+      <option value="/docs/">Quickstart</option>
+      <option value="/docs/installation/">Installation</option>
+      <option value=""></option>
+      <option value="/docs/community/">Community</option>
+      <option value="/docs/step-by-step/01-setup/">Step by Step Tutorial</option>
+    </optgroup>
+    <optgroup label="Build">
+      <option value="/docs/usage/">Command Line Usage</option>
+      <option value="/docs/configuration/">Configuration</option>
+      <option value="/docs/workflows/">Workflows</option>
+    </optgroup>
+    </select>
+</div>
+<div class="unit four-fifths">
+      <article>
+        <div class="improve right hide-on-mobiles">
+          <a data-proofer-ignore href="https://github.com/jekyll/jekyll/edit/master/docs/_docs/configuration/default.md"><i
+             class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+        </div>
+        <h1>Default Configuration</h1>
+        <p>Jekyll runs with the following configuration options by default. Alternative
+settings for these options can be explicitly specified in the configuration
+file or on the command-line.</p>
+
+<div class="note info">
+  <h5>Be aware of directory paths</h5>
+  <p>
+    In general, make directory path values in configuration keys like <code>plugins_dir</code> relative to the current working directory, not the site source. The <code>sass</code> configuration key is an exception, where values must be relative to the site source.
+  </p>
+</div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Where things are</span>
+<span class="na">source              </span><span class="pi">:</span> <span class="s">.</span>
+<span class="na">destination         </span><span class="pi">:</span> <span class="s">./_site</span>
+<span class="na">collections_dir     </span><span class="pi">:</span> <span class="s">.</span>
+<span class="na">plugins_dir         </span><span class="pi">:</span> <span class="s">_plugins</span> <span class="c1"># takes an array of strings and loads plugins in that order</span>
+<span class="na">layouts_dir         </span><span class="pi">:</span> <span class="s">_layouts</span>
+<span class="na">data_dir            </span><span class="pi">:</span> <span class="s">_data</span>
+<span class="na">includes_dir        </span><span class="pi">:</span> <span class="s">_includes</span>
+<span class="na">sass</span><span class="pi">:</span>
+  <span class="na">sass_dir</span><span class="pi">:</span> <span class="s">_sass</span>
+<span class="na">collections</span><span class="pi">:</span>
+  <span class="na">posts</span><span class="pi">:</span>
+    <span class="na">output          </span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Handling Reading</span>
+<span class="na">safe                </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">include             </span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">.htaccess"</span><span class="pi">]</span>
+<span class="na">exclude             </span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">Gemfile"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">Gemfile.lock"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">node_modules"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/bundle/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/cache/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/gems/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/ruby/"</span><span class="pi">]</span>
+<span class="na">keep_files          </span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">.git"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">.svn"</span><span class="pi">]</span>
+<span class="na">encoding            </span><span class="pi">:</span> <span class="s2">"</span><span class="s">utf-8"</span>
+<span class="na">markdown_ext        </span><span class="pi">:</span> <span class="s2">"</span><span class="s">markdown,mkdown,mkdn,mkd,md"</span>
+<span class="na">strict_front_matter </span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Filtering Content</span>
+<span class="na">show_drafts         </span><span class="pi">:</span> <span class="no">null</span>
+<span class="na">limit_posts         </span><span class="pi">:</span> <span class="m">0</span>
+<span class="na">future              </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">unpublished         </span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Plugins</span>
+<span class="na">whitelist           </span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">plugins             </span><span class="pi">:</span> <span class="pi">[]</span>
+
+<span class="c1"># Conversion</span>
+<span class="na">markdown            </span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter         </span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="na">lsi                 </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">excerpt_separator   </span><span class="pi">:</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s">"</span>
+<span class="na">incremental         </span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Serving</span>
+<span class="na">detach              </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">port                </span><span class="pi">:</span> <span class="m">4000</span>
+<span class="na">host                </span><span class="pi">:</span> <span class="s">127.0.0.1</span>
+<span class="na">baseurl             </span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># does not include hostname</span>
+<span class="na">show_dir_listing    </span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Outputting</span>
+<span class="na">permalink           </span><span class="pi">:</span> <span class="s">date</span>
+<span class="na">paginate_path       </span><span class="pi">:</span> <span class="s">/page:num</span>
+<span class="na">timezone            </span><span class="pi">:</span> <span class="no">null</span>
+
+<span class="na">quiet               </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">verbose             </span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">defaults            </span><span class="pi">:</span> <span class="pi">[]</span>
+
+<span class="na">liquid</span><span class="pi">:</span>
+  <span class="na">error_mode        </span><span class="pi">:</span> <span class="s">warn</span>
+  <span class="na">strict_filters    </span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">strict_variables  </span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Markdown Processors</span>
+<span class="na">kramdown</span><span class="pi">:</span>
+  <span class="na">auto_ids          </span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">entity_output     </span><span class="pi">:</span> <span class="s">as_char</span>
+  <span class="na">toc_levels        </span><span class="pi">:</span> <span class="pi">[</span><span class="nv">1</span><span class="pi">,</span> <span class="nv">2</span><span class="pi">,</span> <span class="nv">3</span><span class="pi">,</span> <span class="nv">4</span><span class="pi">,</span> <span class="nv">5</span><span class="pi">,</span> <span class="nv">6</span><span class="pi">]</span>
+  <span class="na">smart_quotes      </span><span class="pi">:</span> <span class="s">lsquo,rsquo,ldquo,rdquo</span>
+  <span class="na">input             </span><span class="pi">:</span> <span class="s">GFM</span>
+  <span class="na">hard_wrap         </span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">footnote_nr       </span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">show_warnings     </span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <h4>Getting Started</h4>
+      <ul>
+        <li><a href="/docs/">Quickstart</a></li>
+        <li><a href="/docs/installation/">Installation</a></li>
+        <li><a href=""></a></li>
+        <li><a href="/docs/community/">Community</a></li>
+        <li><a href="/docs/step-by-step/01-setup/">Step by Step Tutorial</a></li>
+      </ul>
+    <h4>Build</h4>
+      <ul>
+        <li><a href="/docs/usage/">Command Line Usage</a></li>
+        <li><a href="/docs/configuration/">Configuration</a></li>
+        <li><a href="/docs/workflows/">Workflows</a></li>
+      </ul>
+    </aside>
+</div>
+<div class="clear"></div>
+  </div>
+</section>
+<footer>
+  <div class="grid">
+    <div class="unit one-third center-on-mobiles">
+      <p>fibonacci-service-spring-boot is maintained by a <a href="/team/">core team</a> of cprime engineers. </p>
+      <p>The contents of this website are <br />&copy;&nbsp;2021 under the terms of the MIT License</a>.</p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+      <p>
+        Hosted by
+        <a href="https://github.com">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script> docsearch({
+apiKey: '50fe39c839958dfad797000f33e2ec17',
+indexName: 'jekyllrb',
+inputSelector: '#docsearch-input',
+enhancedSearchInput: true,
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fibonacci-service-spring-boot" />
+  <link type="application/atom+xml" rel="alternate" href="/feed/release.xml" title="Jekyll releases posts" />
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to Jekyll’s master branch" href="https://github.com/cprime-labs/fibonacci-service-spring-boot/commits/master.atom">
+  <link rel="preload" href="/fonts/lato-v14-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/lato-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/css/screen.css" as="style">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Special Labels | fibonacci-service-spring-boot</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Special Labels" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This guide is for maintainers. These special people have write access to one or more of Jekyll’s repositories and help merge the contributions of others. You may find what is written here interesting, but it’s definitely not for everyone." />
+<meta property="og:description" content="This guide is for maintainers. These special people have write access to one or more of Jekyll’s repositories and help merge the contributions of others. You may find what is written here interesting, but it’s definitely not for everyone." />
+<link rel="canonical" href="http://localhost:4000/docs/maintaining/special-labels/" />
+<meta property="og:url" content="http://localhost:4000/docs/maintaining/special-labels/" />
+<meta property="og:site_name" content="fibonacci-service-spring-boot" />
+<meta property="og:image" content="http://localhost:4000/img/jekyll-og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/img/jekyll-og.png" />
+<meta property="twitter:title" content="Special Labels" />
+<meta name="twitter:site" content="@cprime" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/img/cprime-logo.png"}},"description":"This guide is for maintainers. These special people have write access to one or more of Jekyll’s repositories and help merge the contributions of others. You may find what is written here interesting, but it’s definitely not for everyone.","image":"http://localhost:4000/img/jekyll-og.png","@type":"WebPage","headline":"Special Labels","url":"http://localhost:4000/docs/maintaining/special-labels/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="wrap"><header>
+  <div class="flexbox">
+    <div class="center-on-mobiles">
+      <h1>
+        <a href="/" class="logo">
+          <span class="sr-only">cprime</span>
+          <img src="/img/cprime-logo.png" height="65" alt="cprime">
+        </a>
+      </h1>
+    </div>
+    <nav class="main-nav hide-on-mobiles">
+      <ul>
+  <li><a href="/">Home</a></li>
+  <li class="current"><a href="/docs/">Docs</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/news/">News</a></li>
+  </ul>
+</nav>
+    <div class="search hide-on-mobiles">
+      <input type="text" id="docsearch-input" placeholder="Search the docs…">
+</div>
+    <div class="meta hide-on-mobiles">
+      <ul>
+        <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot/releases/tag/v0.0.0">v0.0.0</a></li>
+        <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li><a href="/">Home</a></li>
+    <li class="current"><a href="/docs/">Docs</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="https://github.com/cprime-labs/fibonacci-service-spring-boot">GitHub</a></li>
+</ul>
+</nav>
+</header>
+<section class="docs">
+  <div class="grid">
+    <div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the docs…</option>
+    <optgroup label="Getting Started">
+      <option value="/docs/">Quickstart</option>
+      <option value="/docs/installation/">Installation</option>
+      <option value=""></option>
+      <option value="/docs/community/">Community</option>
+      <option value="/docs/step-by-step/01-setup/">Step by Step Tutorial</option>
+    </optgroup>
+    <optgroup label="Build">
+      <option value="/docs/usage/">Command Line Usage</option>
+      <option value="/docs/configuration/">Configuration</option>
+      <option value="/docs/workflows/">Workflows</option>
+    </optgroup>
+    </select>
+</div>
+<div class="unit four-fifths">
+      <article>
+        <div class="improve right hide-on-mobiles">
+          <a data-proofer-ignore href="https://github.com/jekyll/jekyll/edit/master/docs/_docs/maintaining/special-labels.md"><i class="fa fa-pencil"></i>  Improve this page</a>
+        </div>
+        <h1>Special Labels</h1>
+        <p class="note info"><strong>This guide is for maintainers.</strong> These special people have <strong>write access</strong> to one or more of Jekyll’s repositories and help merge the contributions of others. You may find what is written here interesting, but it’s definitely not for everyone.</p>
+
+<p>We use a series of “special labels” on GitHub.com to automate handling of some parts of the pull request and issue process. <a href="https://github.com/jekyllbot" class="user-mention">@jekyllbot</a> may automatically apply or remove certain labels based on actions taken by users or maintainers. Below are the labels and how they work:</p>
+
+<h2 id="pending-feedback"><code class="language-plaintext highlighter-rouge">pending-feedback</code></h2>
+
+<p>This label is used to indicate that we need more information from the issue/PR author in order to continue. It may be that you need more info before you can properly triage a bug report, or that you have some unanswered questions about a PR that need to be resolved before moving forward. You can safely ignore any issue with this label, as it is waiting for feedback.</p>
+
+<h2 id="needs-work--pending-rebase">
+<code class="language-plaintext highlighter-rouge">needs-work</code> &amp; <code class="language-plaintext highlighter-rouge">pending-rebase</code>
+</h2>
+
+<p>These labels are used to indicate that the Git state of a pull request must change. Both are removed once a push is registered (a “synchronize” event for the pull request) and the pull request becomes mergable. Add <code class="language-plaintext highlighter-rouge">needs-work</code> to a PR if, after your review, it requires code changes. Add <code class="language-plaintext highlighter-rouge">pending-rebase</code> to a PR if the code is fine but the branch is not automatically mergable with the target branch (e.g. <code class="language-plaintext highlighter-rouge">master</code>).</p>
+
+<h2 id="stale"><code class="language-plaintext highlighter-rouge">stale</code></h2>
+
+<p>This label is automatically added and removed by <a href="https://github.com/jekyllbot" class="user-mention">@jekyllbot</a> based on activity on an issue or pull request. The rules for this label are laid out in <a href="../triaging-an-issue/#staleness-and-automatic-closure">Triaging an Issue: Staleness and automatic closure</a>.</p>
+
+<h2 id="pinned"><code class="language-plaintext highlighter-rouge">pinned</code></h2>
+
+<p>This label is for <a href="https://github.com/jekyllbot" class="user-mention">@jekyllbot</a> to ignore the age of the issue, which means that the <code class="language-plaintext highlighter-rouge">stale</code> label won’t be automatically added, and the issue won’t be closed after a while. This needs to be set manually, and should be set with care. (The <code class="language-plaintext highlighter-rouge">has-pull-request</code> label does the same thing, but shouldn’t be used to <em>only</em> keep an issue open)</p>
+
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <h4>Getting Started</h4>
+      <ul>
+        <li><a href="/docs/">Quickstart</a></li>
+        <li><a href="/docs/installation/">Installation</a></li>
+        <li><a href=""></a></li>
+        <li><a href="/docs/community/">Community</a></li>
+        <li><a href="/docs/step-by-step/01-setup/">Step by Step Tutorial</a></li>
+      </ul>
+    <h4>Build</h4>
+      <ul>
+        <li><a href="/docs/usage/">Command Line Usage</a></li>
+        <li><a href="/docs/configuration/">Configuration</a></li>
+        <li><a href="/docs/workflows/">Workflows</a></li>
+      </ul>
+    </aside>
+</div>
+<div class="clear"></div>
+  </div>
+</section>
+<footer>
+  <div class="grid">
+    <div class="unit one-third center-on-mobiles">
+      <p>fibonacci-service-spring-boot is maintained by a <a href="/team/">core team</a> of cprime engineers. </p>
+      <p>The contents of this website are <br>© 2021 under the terms of the MIT License.</p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+      <p>
+        Hosted by
+        <a href="https://github.com">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+       
+    </div>
+  </div>
+</footer>
+<script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script> docsearch({
+apiKey: '50fe39c839958dfad797000f33e2ec17',
+indexName: 'jekyllrb',
+inputSelector: '#docsearch-input',
+enhancedSearchInput: true,
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
+</body>
+</html>
