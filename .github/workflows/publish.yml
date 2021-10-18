@@ -22,6 +22,11 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Run junit5 tests with Maven
+        run: mvn test --settings maven-settings.xml --file pom.xml
+        env: 
+          MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
+          MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
       - name: Deploy jar to maven packages repository
         run: mvn deploy --settings maven-settings.xml --file pom.xml
         env: 
