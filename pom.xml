@@ -12,9 +12,52 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fibonacci-service</name>
 	<description>A spring boot microservice implementation for the Fibonacci DevOps demo.</description>
+
 	<properties>
 		<java.version>11</java.version>
+		<github.global.server>github</github.global.server>
 	</properties>
+
+	<repositories>
+		<repository>
+		<id>central</id>
+		<name>central</name>
+		<url>https://repo1.maven.org/maven2</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+		</repository>
+		<repository>
+		<id>github</id>
+		<name>github</name>
+		<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHubApache Maven Packages</name>
+      <url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</connection>
+    <developerConnection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</developerConnection>
+    <url>https://github.com/cprime-labs/fibonacci-service-spring-boot</url>
+  </scm>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
