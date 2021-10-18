@@ -28,13 +28,13 @@ jobs:
       - name: Run junit5 tests with Maven
         run: mvn test --settings maven-settings.xml --file pom.xml
         env: 
-          MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
-          MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
+          MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
+          MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy jar to maven packages repository
         run: mvn deploy --settings maven-settings.xml --file pom.xml
         env: 
-          MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
-          MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
+          MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
+          MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build-and-push-docker:
     name: Build and publish docker action
     runs-on: ubuntu-latest
@@ -47,4 +47,4 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
