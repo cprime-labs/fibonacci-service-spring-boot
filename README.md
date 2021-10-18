@@ -5,7 +5,7 @@
 [![Maintained by CPrime Elite Engineering](https://img.shields.io/badge/maintained%20by-cprime%20elite%20engineering-ED1846)](https://cprime.com/) 
 [![Built for Engineers](https://img.shields.io/badge/project-fibonacci%20devops%20demo-ED1846)](https://github.com/cprimeinc)
 [![Latest](https://img.shields.io/badge/latest-0.0.0-ED1846)](../../releases)
-[![Gitter](https://badges.gitter.im/Cprime-Engineering/community.svg)](https://gitter.im/Cprime-Engineering/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/cprime-elite-engineering/community.svg)](https://gitter.im/cprime-elite-engineering/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
 # fibonacci-service-spring-boot
