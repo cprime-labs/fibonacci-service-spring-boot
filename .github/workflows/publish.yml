@@ -5,13 +5,16 @@ on:
       - main
   schedule:
     - cron:  '0 3 * * *'
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 jobs:
-  deploy:
-    name: Maven deploy action
+  test-and-deploy-maven:
+    name: Maven test and deploy action
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Set up JDK 14
         uses: actions/setup-java@v1
         with:
@@ -32,3 +35,10 @@ jobs:
         env: 
           MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
           MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
+  build-and-push-docker:
+    name: Build and publish docker action
+    runs-on: ubuntu-latest
+    needs: test-and-deploy-maven
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
