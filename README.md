@@ -8,6 +8,7 @@
 
 
 # fibonacci-service-spring-boot
+
 A spring boot microservice implementation for the Fibonacci DevOps demo.
 
 ## Build Status
@@ -15,7 +16,6 @@ A spring boot microservice implementation for the Fibonacci DevOps demo.
 ![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/unit-test.yml/badge.svg)
 ![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/publish.yml/badge.svg)
-
 
 ## Sonarcloud Analysis
 
@@ -57,32 +57,35 @@ Tasks and issues that relate to development of this repo can be found in this re
 
 Follow these steps to fully implement this repo:
 
-#### Step 0: GitHub.
+### Step 0: GitHub.
+
 If you are viewing this readme by any other means go to the canonical repository on [GitHub](https://github.com/cprime-labs/fibonacci-service-spring-boot) for the most up to date version of this repo.
 
-#### Step 1: Launch Gitpod IDE.
-- If you don't already have it installed we recommend using the [GitPod Browser Extension](https://www.gitpod.io/docs/browser-extension/).
-- On the home page for this repo, select the branch you want to base your work on then click 'GitPod'. Alternatively click this url https://gitpod.io/#https://github.com/cprime-labs/fibonacci-service-spring-boot
-- Gitpod will now launch.
+### Step 1: Launch Gitpod IDE.
 
-#### Step 3: Run the tests.
-- From the command prompt in the project root of this repo, execute the following command.
-- `make fibonacci-service/run-local`
+* If you don't already have it installed we recommend using the [GitPod Browser Extension](https://www.gitpod.io/docs/browser-extension/).
+* On the home page for this repo, select the branch you want to base your work on then click 'GitPod'. Alternatively click this url https://gitpod.io/#https://github.com/cprime-labs/fibonacci-service-spring-boot
+* Gitpod will now launch.
 
+### Step 3: Run the tests.
 
-#### Step 5: Eat, Sleep, Code, Repeat!
-- Create a local working branch for whatever feature you are working on.
-- Run local tests to ensure you won't push a breaking build.
-- Push your branch to origin to trigger an automated CI build.
-- If the automated CI build passed, create a pull request to have your code merged to the master branch.
-- Rinse and repeat! Happy coding :)
+* From the command prompt in the project root of this repo, execute the following command.
+* `make fibonacci-service/run-local`
 
+### Step 5: Eat, Sleep, Code, Repeat!
+
+* Create a local working branch for whatever feature you are working on.
+* Run local tests to ensure you won't push a breaking build.
+* Push your branch to origin to trigger an automated CI build.
+* If the automated CI build passed, create a pull request to have your code merged to the master branch.
+* Rinse and repeat! Happy coding :)
 
 ## Tooling
 
 The following tools are not strictly required to work with this repo but we recommend their use and used them oursleves in the creation of this repo:
-- [GitHub](https://GitHub.com): GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features. 
-- [Gitpod](https://www.gitpod.io/): Gitpod streamlines developer workflows by providing prebuilt, collaborative development environments in your browser - powered by VS Code.
+
+* [GitHub](https://GitHub.com): GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features. 
+* [Gitpod](https://www.gitpod.io/): Gitpod streamlines developer workflows by providing prebuilt, collaborative development environments in your browser * powered by VS Code.
 
 <a href="https://cprime.com/" target="_blank">
 <img src=".assets/cp-gh-gp-ms-partner.png" />
@@ -93,10 +96,10 @@ The following tools are not strictly required to work with this repo but we reco
 This repo is maintained by CPrime Engineering. If you're looking for support, send an email to [elite-engineering@cprime.com](mailto:elite-engineering@cprime.com?subject=Fibonacci%20DevOps%20Demo).
 CPrime Engineering can help with:
 
-- Setup, customization, and support for this repo.
-- Modules for other types of infrastructure, such as VPCs, Docker clusters, databases, and continuous integration.
-- Modules that meet compliance requirements, such as HIPAA.
-- Consulting & Training on Azure, AWS, Terraform, and DevOps.
+* Setup, customization, and support for this repo.
+* Modules for other types of infrastructure, such as VPCs, Docker clusters, databases, and continuous integration.
+* Modules that meet compliance requirements, such as HIPAA.
+* Consulting & Training on Azure, AWS, Terraform, and DevOps.
 
 ## How do I contribute to this repo?
 
@@ -128,4 +131,3 @@ This code is released under the MIT License. Please see [LICENSE](/LICENSE) and 
 <a href="https://opensource.org/" target="_blank">
 <img src=".assets/cp-osi-love.png" />
 </a>
-
