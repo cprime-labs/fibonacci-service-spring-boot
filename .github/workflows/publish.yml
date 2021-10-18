@@ -1,4 +1,4 @@
-name: publish packages
+name: publish maven and docker packages
 on:
   push:
     branches:
