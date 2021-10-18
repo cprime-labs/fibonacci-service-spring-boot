@@ -10,7 +10,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 jobs:
   test-and-deploy-maven:
-    name: Maven test and deploy action
+    name: Maven deploy and docker push action
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -35,13 +35,6 @@ jobs:
         env: 
           MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
           MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  build-and-push-docker:
-    name: Build and publish docker action
-    runs-on: ubuntu-latest
-    needs: test-and-deploy-maven
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
