@@ -31,10 +31,9 @@ jobs:
           MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
           MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy jar to maven packages repository
-        run: mvn deploy --settings maven-settings.xml --file pom.xml
-        env: 
-          MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
-          MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Log in to github container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
