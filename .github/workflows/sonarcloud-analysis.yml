@@ -1,4 +1,4 @@
-name: sonarCloud analysis
+name: sonarcloud analysis
 on: 
   push:
   schedule:
