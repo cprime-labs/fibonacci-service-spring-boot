@@ -7,6 +7,7 @@
 [![Latest](https://img.shields.io/badge/latest-0.0.0-ED1846)](../../releases)
 [![Gitter](https://badges.gitter.im/Cprime-Engineering/community.svg)](https://gitter.im/Cprime-Engineering/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+
 # fibonacci-service-spring-boot
 A spring boot microservice implementation for the Fibonacci DevOps demo.
 
