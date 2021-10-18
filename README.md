@@ -13,6 +13,7 @@ A spring boot microservice implementation for the Fibonacci DevOps demo.
 
 ![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/unit-test.yml/badge.svg)
 ![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/sonarcloud-analysis.yml/badge.svg)
+![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/publish.yml/badge.svg)
 
 
 ## Sonarcloud Analysis
