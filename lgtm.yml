@@ -3,4 +3,3 @@ extraction:
     index:
       maven:
         version: 3.8.1
-        settings_file: maven-settings.xml
