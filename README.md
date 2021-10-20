@@ -5,6 +5,7 @@
 [![Maintained by CPrime Elite Engineering](https://img.shields.io/badge/maintained%20by-cprime%20elite%20engineering-ED1846)](https://cprime.com/) 
 [![Built for Engineers](https://img.shields.io/badge/project-fibonacci%20devops%20demo-ED1846)](https://github.com/cprimeinc)
 [![Latest](https://img.shields.io/badge/latest-0.0.0-ED1846)](../../releases)
+[![Chat on Gitter](https://img.shields.io/badge/communit%20&%20support-chat%20on%20gitter-ED1846)](https://gitter.im/cprime-elite-engineering/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
 # fibonacci-service-spring-boot
@@ -30,10 +31,6 @@ A spring boot microservice implementation for the Fibonacci DevOps demo.
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=coverage)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=code_smells)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_index)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-
-## Community & Support
-
-[![Gitter](https://badges.gitter.im/cprime-elite-engineering/community.svg)](https://gitter.im/cprime-elite-engineering/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Overview
 
