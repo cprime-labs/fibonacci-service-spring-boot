@@ -25,3 +25,10 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}${{ matrix.java }}${{ matrix.os }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Run junit5 tests with Maven
+        run: mvn test
+        env: 
+          MAVEN_REGISTRY_USERNAME: ${{ github.actor }}
+          MAVEN_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      
